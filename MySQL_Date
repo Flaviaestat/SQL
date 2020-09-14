@@ -1,0 +1,5 @@
+select 
+/*payment_method_id, SUM(total_amount) */
+*
+FROM ubook.bi_media_investment
+WHERE month(media_from_date) = 8 and year(media_from_date) = 2020
