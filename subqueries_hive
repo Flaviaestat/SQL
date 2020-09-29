@@ -1,0 +1,6 @@
+SELECT customer.customer_num,
+    (SELECT SUM(ship_charge)
+        FROM orders
+        WHERE customer.customer_num = orders.customer_num
+    ) AS total_ship_chg
+FROM customer
